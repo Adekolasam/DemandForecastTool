@@ -1,0 +1,83 @@
+﻿@model IEnumerable<DemandForecastTool.Models.ReadResourceDemandModel>
+
+@{
+    ViewData["Title"] = "Demands";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>List of Demands</h1>
+
+<p>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.RequestedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Environment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataCentre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ResourceType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CTS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EIS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GMB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GMIT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RISK)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequestedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Environment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCentre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResourceType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CTS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EIS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GMB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GMIT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RISK)
+            </td>
+            @*<td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
